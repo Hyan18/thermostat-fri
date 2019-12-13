@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Thermostat</title>
-    <link rel="stylesheet" type="text/css" href="index.css">
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
 </head>
 <body>
     
     <h1 id="temperature"></h1>
+
     <section> 
         <p>
             <button id="up">+</button><br>
@@ -19,11 +20,20 @@
             <button id="powerSaverSwitch">Power Saver Mode</button>
         </p>
     </section>
+
+    <section>
+        <select id="city">
+            <option>London</option>
+            <option>Manchester</option>
+            <option>Bristol</option>
+        </select>
+        <h2>Current weather in London: <span id="weather"></span></h2>
+    </section>
+
     <script
-        src="https://code.jquery.com/jquery-3.4.1.slim.js"
-		integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-        crossorigin="anonymous">
-    </script>
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
     <script src="src/thermostat.js"></script>
     <script src="src/javascriptDOM.js"></script>
 
