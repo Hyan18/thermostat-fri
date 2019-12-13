@@ -1,8 +1,9 @@
 'use strict';
 
-const MIN_TEMP =10
+const DEFAULT_TEMPERATURE = 20;
+const MIN_TEMP = 10
 
-function Thermostat(temperature = 20) {
+function Thermostat(temperature = DEFAULT_TEMPERATURE) {
   this.temperature = temperature;
   this.powerSaverMode = true
 };

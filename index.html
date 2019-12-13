@@ -1,25 +1,31 @@
 <!DOCTYPE html>
-
-<head> 
-    <title>Thermostat </title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thermostat</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-
-
-
 <body>
-        <h1 id="Thermostat"></h1>
+    
+    <h1 id="temperature"></h1>
     <section> 
         <p>
             <button id="up">+</button><br>
             <button id="down">-</button><br>
-            <button id="reset">reset</button><br>
-            power saver mode is <span id="power-saving-status"> on</span><br>
+            <button id="reset">Reset</button><br>
+            Power saver mode is <span id="power-saving-status"> on</span><br>
             <button id="powerSaverSwitch">Power Saver Mode</button>
         </p>
     </section>
-    <script src="src/jquery.js"></script>
+    <script
+        src="https://code.jquery.com/jquery-3.4.1.slim.js"
+		integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
+        crossorigin="anonymous">
+    </script>
     <script src="src/thermostat.js"></script>
     <script src="src/javascriptDOM.js"></script>
-</body>
 
+</body>
 </html>

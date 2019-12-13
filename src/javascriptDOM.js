@@ -1,41 +1,36 @@
 $( document ).ready(function() {
+
   var thermostat = new Thermostat();
 
-  $( '#Thermostat').text(thermostat.temperature);
+  function updateTemperature(){
+    $("#temperature").text(`${thermostat.temperature}°C`)
+    $('#temperature').attr('class', thermostat.usage());
+    console.log(thermostat.usage())
+  };
 
-  $( '#power-saving-status').text(thermostat.powerSaverStatus());
+  updateTemperature();
 
-  $( "#up" ).click(function( event ) {
+  $('#power-saving-status').text(thermostat.powerSaverStatus());
 
-      thermostat.up();
-      $( '#Thermostat').text(thermostat.temperature);
-
+  $('#up').click(function( event ) {
+    thermostat.up()
+    updateTemperature();
   });
 
-  $( "#down" ).click(function( event ) {
-
-    thermostat.down();
-    $( '#Thermostat').text(thermostat.temperature);
-
+  $('#down').click(function( event ) {
+    thermostat.down()
+    updateTemperature();
   });
 
-  $( "#reset" ).click(function( event ) {
-
-    thermostat.reset();
-    $( '#Thermostat').text(thermostat.temperature);
-
+  $('#reset').click(function( event ) {
+    thermostat.reset()
+    updateTemperature();
   });
 
-  $( "#powerSaverSwitch" ).click(function( event ) {
-
-    thermostat.powerSaverSwitch();
-
-    $( '#power-saving-status').text(thermostat.powerSaverStatus());
-
-    $( '#Thermostat').text(thermostat.temperature);
-
+  $('#powerSaverSwitch').click(function( event ) {
+    thermostat.powerSaverSwitch()
+    $('#power-saving-status').text(thermostat.powerSaverStatus())
+    updateTemperature();
   });
-
-
 
 });
